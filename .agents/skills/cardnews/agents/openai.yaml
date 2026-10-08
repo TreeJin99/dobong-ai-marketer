@@ -1,0 +1,8 @@
+interface:
+  display_name: "카드뉴스 5장"
+  short_description: "사이트재료로 인스타 카드뉴스 5장과 캡션 링크를 만들기"
+  brand_color: "#C2410C"
+  default_prompt: "$cardnews 로 사이트재료.md 를 카드뉴스 5장으로 만들어 주세요"
+
+policy:
+  allow_implicit_invocation: true

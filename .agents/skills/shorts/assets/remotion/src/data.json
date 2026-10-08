@@ -1,0 +1,7 @@
+{
+  "color": "#296258",
+  "background": "#f4f6f5",
+  "secondsPerCard": 3,
+  "cards": ["card1.png", "card2.png", "card3.png", "card4.png", "card5.png"],
+  "subtitles": ["자막 1", "자막 2", "자막 3", "자막 4", "자막 5"]
+}

@@ -1,0 +1,8 @@
+interface:
+  display_name: "주간 리포트"
+  short_description: "GA4 숫자와 기준점으로 주간 리포트 워드 1장 만들기"
+  brand_color: "#1F4E78"
+  default_prompt: "$report 로 이번 주 GA4 숫자를 주간 리포트로 정리해 주세요"
+
+policy:
+  allow_implicit_invocation: true

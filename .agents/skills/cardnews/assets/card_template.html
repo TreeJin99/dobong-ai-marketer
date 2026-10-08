@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS}}
+:root { --c: {{COLOR}}; --ink: #1f2322; --muted: #5b6361; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; }
+body { font-family: 'Pretendard', sans-serif; color: var(--ink); background: #fff;
+  word-break: keep-all; overflow-wrap: anywhere; -webkit-font-smoothing: antialiased; }
+.card { position: relative; width: 1080px; height: 1350px; padding: 140px 96px 200px;
+  display: flex; flex-direction: column; overflow: hidden; }
+.shape { position: absolute; width: 720px; height: 720px; border-radius: 50%;
+  right: -260px; bottom: -300px; background: var(--c); opacity: .07; }
+.content { position: relative; flex: 1; display: flex; flex-direction: column;
+  justify-content: center; gap: 44px; overflow: hidden; }
+.label { font-size: 36px; font-weight: 700; color: var(--c); letter-spacing: -0.01em; }
+h1 { font-size: 104px; font-weight: 800; line-height: 1.24; letter-spacing: -0.035em; }
+h2 { font-size: 76px; font-weight: 800; line-height: 1.3; letter-spacing: -0.03em; }
+.sub { font-size: 42px; font-weight: 500; line-height: 1.5; }
+.body { font-size: 42px; font-weight: 500; line-height: 1.6; color: var(--muted); }
+.quote { font-size: 46px; font-weight: 700; line-height: 1.5; padding: 40px 48px;
+  border-radius: 28px; background: #f3f5f4; }
+.num { display: flex; align-items: baseline; gap: 16px; color: var(--c); }
+.num span { font-size: 220px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+.num small { font-size: 72px; font-weight: 800; }
+.source { font-size: 32px; font-weight: 500; color: var(--muted); }
+ul { list-style: none; counter-reset: n; display: flex; flex-direction: column; gap: 32px;
+  font-size: 46px; font-weight: 700; line-height: 1.4; }
+li { counter-increment: n; display: flex; gap: 28px; align-items: center; }
+li::before { content: counter(n); flex: none; width: 64px; height: 64px; border-radius: 50%;
+  background: var(--c); color: #fff; font-size: 36px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; }
+.url { font-size: 50px; font-weight: 700; color: var(--c); word-break: break-all; }
+.btn { align-self: flex-start; background: var(--c); color: #fff; font-size: 46px;
+  font-weight: 700; padding: 30px 72px; border-radius: 20px; }
+footer { position: absolute; left: 96px; right: 96px; bottom: 80px; display: flex;
+  justify-content: space-between; font-size: 30px; font-weight: 500; color: var(--muted); }
+/* 표지: 포인트색 바탕 + 흰 글자 */
+.cover { background: var(--c) var(--bg) center / cover no-repeat; color: #fff; }
+.cover.has-bg::before { content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.6)); }
+.cover .label, .cover footer { color: rgba(255,255,255,.85); }
+.cover .shape { background: #fff; opacity: .08; }
+/* 행동: 아주 연한 포인트색 바탕 */
+.action { background: #f5f7f6; background: color-mix(in srgb, var(--c) 7%, #fff); }
+.action .shape { display: none; }
+</style>
+</head>
+<body>
+<div class="card {{TYPE}} {{HASBG}}" style="--bg: {{BG}}">
+  <div class="shape"></div>
+  <div class="content">{{BODY}}</div>
+  <footer><span>{{BRAND}}</span><span>{{PAGE}}</span></footer>
+</div>
+<script>
+// 글이 길어서 넘치면 글자를 조금씩 줄여서 칸 안에 맞춘다
+window.fitAll = function () {
+  const box = document.querySelector('.content');
+  const els = Array.from(box.querySelectorAll('h1, h2, .sub, .body, .quote, ul, .url, .num span'));
+  const base = els.map(e => parseFloat(getComputedStyle(e).fontSize));
+  for (let k = 1; k <= 30 && (box.scrollHeight > box.clientHeight + 1 ||
+       els.some(e => e.scrollWidth > e.clientWidth + 1)); k++) {
+    els.forEach((e, i) => { e.style.fontSize = (base[i] * (1 - k * 0.03)) + 'px'; });
+  }
+  document.body.dataset.fitted = '1';
+};
+document.fonts.ready.then(window.fitAll);
+</script>
+</body>
+</html>

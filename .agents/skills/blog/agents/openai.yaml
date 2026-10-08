@@ -1,0 +1,8 @@
+interface:
+  display_name: "블로그 글 1편"
+  short_description: "검색어를 넣은 블로그 글 1편을 붙여넣기용으로 쓰기"
+  brand_color: "#15803D"
+  default_prompt: "$blog 로 내 주제의 블로그 글 1편을 써 주세요"
+
+policy:
+  allow_implicit_invocation: true

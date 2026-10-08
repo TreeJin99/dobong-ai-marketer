@@ -1,0 +1,8 @@
+interface:
+  display_name: "기준점 기록"
+  short_description: "검색 결과에 내 사이트가 나오는지 날짜와 함께 기록"
+  brand_color: "#2F7D5B"
+  default_prompt: "$baseline 으로 내 주제의 검색 기준점을 기록해 주세요"
+
+policy:
+  allow_implicit_invocation: true
