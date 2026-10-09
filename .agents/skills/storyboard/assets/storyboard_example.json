@@ -1,0 +1,14 @@
+{
+  "title": "도봉구 무인 스터디카페, 관리에서 답을 찾았습니다",
+  "source": "내사이트/posts/dobong-study-cafe-report.html",
+  "color": "#296258",
+  "secondsPerScene": 4,
+  "speed": 1,
+  "scenes": [
+    {"role": "훅", "big": "무인 스터디카페\n괜찮을까요?", "small": "도봉구 이웃이 알아봤어요", "motion": "나타나기", "subtitle": "동네에 무인 매장이 늘어요", "bigSize": 120},
+    {"role": "문제", "big": "의자 · 냉방 · 조명\n불편 후기", "small": "창동 공개 후기 3건", "motion": "밀려들기", "subtitle": "후기에 나온 불편한 점", "bigSize": 120},
+    {"role": "근거", "big": "약 62배 늘었어요", "small": "스터디카페 가맹점 (2015~2024)", "motion": "숫자 올라가기", "subtitle": "전국 가맹점이 크게 늘었어요", "bigSize": 120},
+    {"role": "해결", "big": "매일 챙기는\n생활밀착 관리", "small": "요청에는 10분 안에 답하기", "motion": "밑줄 긋기", "subtitle": "사람이 챙기는 무인 매장", "bigSize": 120},
+    {"role": "행동", "big": "자세한 이야기는\n사이트에서", "small": "설명란 링크에서 보세요", "motion": "커지기", "subtitle": "링크는 설명란에 있어요", "bigSize": 120}
+  ]
+}

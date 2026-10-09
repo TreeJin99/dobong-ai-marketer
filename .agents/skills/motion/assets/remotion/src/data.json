@@ -1,0 +1,12 @@
+{
+  "color": "#296258",
+  "secondsPerScene": 4,
+  "speed": 1,
+  "scenes": [
+    {"role": "훅", "big": "큰 글자 1", "small": "작은 글자 한 줄", "motion": "나타나기", "subtitle": "자막 1", "bigSize": 120},
+    {"role": "문제", "big": "큰 글자 2", "small": "작은 글자 한 줄", "motion": "밀려들기", "subtitle": "자막 2", "bigSize": 120},
+    {"role": "근거", "big": "약 62배 늘었어요", "small": "작은 글자 한 줄", "motion": "숫자 올라가기", "subtitle": "자막 3", "bigSize": 120},
+    {"role": "해결", "big": "큰 글자 4", "small": "작은 글자 한 줄", "motion": "밑줄 긋기", "subtitle": "자막 4", "bigSize": 120},
+    {"role": "행동", "big": "큰 글자 5", "small": "작은 글자 한 줄", "motion": "커지기", "subtitle": "자막 5", "bigSize": 120}
+  ]
+}
