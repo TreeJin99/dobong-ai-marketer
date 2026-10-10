@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{서비스 이름}} · {{한 줄 약속}}</title>
+<meta name="description" content="{{이 화면 설명 한 문장}}">
+<meta property="og:title" content="{{서비스 이름}} · {{한 줄 약속}}">
+<meta property="og:description" content="{{이 화면 설명 한 문장}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="wide">
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html">{{서비스 이름}}</a>
+  <nav class="nav"><a href="index.html" aria-current="page">서비스</a><a href="about.html">소개</a></nav>
+</div></header>
+<div class="notice" id="notice" hidden><div class="wrap"></div></div>
+
+<main class="wrap">
+  <div class="app-head">
+    <h1>{{한 줄 약속}}</h1>
+    <p>{{화면 설명 한 줄}}</p>
+  </div>
+  <input class="search" id="q" type="search" placeholder="{{찾을 말, 예: 이름이나 동네}}" aria-label="찾기">
+  <div class="chips" id="chips" role="group" aria-label="분류 고르기"></div>
+  <ul class="list-grid" id="list"></ul>
+  <p class="sample-note" id="sampleNote" hidden style="margin-bottom:64px">「예시」가 붙은 항목은 화면을 보여 드리려고 넣은 예시입니다.</p>
+</main>
+
+<footer class="site-footer"><div class="wrap">{{서비스 이름}} · 만든 사람 {{별명}}</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

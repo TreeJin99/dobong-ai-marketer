@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{서비스 이름}} · {{한 줄 약속}}</title>
+<meta name="description" content="{{이 화면 설명 한 문장}}">
+<meta property="og:title" content="{{서비스 이름}} · {{한 줄 약속}}">
+<meta property="og:description" content="{{이 화면 설명 한 문장}}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html">{{서비스 이름}}</a>
+  <nav class="nav"><a href="index.html" aria-current="page">서비스</a><a href="about.html">소개</a></nav>
+</div></header>
+<div class="notice" id="notice" hidden><div class="wrap"></div></div>
+
+<main class="wrap">
+  <div class="app-head">
+    <h1>{{한 줄 약속}}</h1>
+    <p>{{화면 설명 한 줄}}</p>
+  </div>
+  <section class="quiz" id="quiz" aria-live="polite"></section>
+</main>
+
+<footer class="site-footer"><div class="wrap">{{서비스 이름}} · 만든 사람 {{별명}}</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
