@@ -1,0 +1,16 @@
+{
+  "name": "my-service",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@next/third-parties": "16.4.0",
+    "leaflet": "1.9.4",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}

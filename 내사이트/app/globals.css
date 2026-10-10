@@ -43,7 +43,7 @@ p { margin: 0; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
 .text { max-width: var(--text); }
-body.wide { --wrap: 1440px; }
+.wide { --wrap: 1440px; }
 
 /* 머리 메뉴 */
 .site-header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
